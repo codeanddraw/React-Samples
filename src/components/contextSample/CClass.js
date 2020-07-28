@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Fname } from '../../App'
+import { Fname } from '../../App1'
 
 const CClass = () => {
     const name  = useContext(Fname);

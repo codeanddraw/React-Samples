@@ -1,19 +1,22 @@
-import React, { createContext } from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import AClass from './components/contextSample/AClass'
 
-const Fname = createContext()
 function App() {
+    const [numVal, setNum] = useState(0)
+    useEffect(()=>{
+        alert("Counter button was clicked")
+    }, [numVal])
   return (
     <div className="App">
       <header className="App-header">
-      <Fname.Provider value={"Context API"}>
-        <AClass />
-      </Fname.Provider>
+        <button onClick={()=>{
+            setNum(numVal + 1)
+        }}>
+        Click me {numVal}
+        </button>
       </header>
     </div>
   );
 }
 
 export default App;
-export { Fname };
