@@ -1,13 +1,23 @@
-import React, { createContext } from 'react';
+import React  from 'react';
 import './App.css';
-import ComA from './components/pokemonAPI/ComA'
+import { Route, Switch } from 'react-router-dom';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import Error from './components/pages/Error';
 
-function App() {
+const App = () => {
+    const Name = () =>{
+        return <h1>Hello, I am in Name Page</h1>
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <ComA/>
-      </header>
+    <div>
+      <Switch>
+          <Route exact path='/' component={About}></Route>
+          <Route exact path='/contact' component={Contact}></Route>
+          <Route path='/contact/Name' component={Name}></Route>
+          <Route component={Error}/>
+      </Switch>
     </div>
   );
 }

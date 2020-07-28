@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import './App.css';
+import '../../App.css';
 import AClass from './components/contextSample/AClass'
 
 const Fname = createContext()
