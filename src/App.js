@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Error from './components/pages/Error';
+import Menu from './components/pages/Menu';
 
 const App = () => {
     const Name = () =>{
@@ -11,14 +12,15 @@ const App = () => {
     }
 
   return (
-    <div>
+    <>
+    <Menu/>
       <Switch>
           <Route exact path='/' component={About}></Route>
           <Route exact path='/contact' component={Contact}></Route>
           <Route path='/contact/Name' component={Name}></Route>
           <Route component={Error}/>
       </Switch>
-    </div>
+    </>
   );
 }
 
