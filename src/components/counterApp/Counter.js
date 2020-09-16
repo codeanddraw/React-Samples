@@ -7,8 +7,8 @@ function Counter() {
     <div  data-test="component-app" className="App">
       <header className="App-header">
         Hello, Welcome to my Counter Demo.
-        <p>Count:{count}</p>
-        <button onClick={() => setCount(count+1)} >
+        <p data-test="component-display" >Count:{count}</p>
+        <button  data-test="component-button" onClick={() => setCount(count+1)} >
             Click me
         </button>
       </header>
