@@ -5,6 +5,7 @@ import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Error from './components/pages/Error';
 import Menu from './components/pages/Menu';
+import Counter from './components/counterApp/Counter';
 
 const App = () => {
     const Name = () =>{
@@ -15,9 +16,10 @@ const App = () => {
     <>
     <Menu/>
       <Switch>
-          <Route exact path='/' component={About}></Route>
-          <Route exact path='/contact' component={Contact}></Route>
+          <Route exact path='/' component={() => <About/>}></Route>
+          <Route exact path='/contact' render={() => <Contact/>}></Route>
           <Route path='/contact/Name' component={Name}></Route>
+          <Route exact path='/counter' component={() => <Counter/>}></Route>
           <Route component={Error}/>
       </Switch>
     </>

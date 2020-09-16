@@ -3,6 +3,7 @@ import '../../App.css';
 
 function App() {
     const [numVal, setNum] = useState(0)
+    
     useEffect(()=>{
         alert("Counter button was clicked")
         document.title=`You clicked me ${numVal}`
